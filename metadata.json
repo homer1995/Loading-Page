@@ -1,0 +1,6 @@
+{
+  "name": "WF Mídias | Marketing e Soluções Digitais",
+  "description": "WF Mídias: Google Meu Negócio, placas QR Code e NFC, placas personalizadas, BioSite, marketing digital e soluções para fortalecer a presença da sua empresa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
