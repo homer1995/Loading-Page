@@ -36,7 +36,7 @@ export const PlatesGallerySection: React.FC<PlatesGallerySectionProps> = ({ onOp
   };
 
   return (
-    <section className="snap-slide relative flex flex-col justify-center py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full min-h-[100dvh]">
+    <section className="fluid-section flex flex-col justify-center py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto w-full min-h-[calc(100vh-4rem)]">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 gap-4">
         <div>

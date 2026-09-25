@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
   return (
-    <section className="snap-slide relative flex flex-col justify-between pt-20 pb-8 px-4 sm:px-6 max-w-6xl mx-auto w-full min-h-[100dvh]">
+    <section className="fluid-section flex flex-col justify-between pt-12 pb-16 px-4 sm:px-6 max-w-6xl mx-auto w-full min-h-[calc(100vh-4rem)]">
       {/* Subtle background ambient gradients */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 sm:w-[500px] h-80 sm:h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute top-2/3 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />

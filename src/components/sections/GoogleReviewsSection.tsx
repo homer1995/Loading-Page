@@ -16,7 +16,7 @@ export const GoogleReviewsSection: React.FC = () => {
   };
 
   return (
-    <section className="snap-slide relative flex flex-col justify-center py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full min-h-[100dvh]">
+    <section className="fluid-section flex flex-col justify-center py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto w-full min-h-[calc(100vh-4rem)]">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Real Image with Interactive NFC Trigger */}
         <div className="lg:col-span-6 flex flex-col items-center justify-center order-2 lg:order-1">

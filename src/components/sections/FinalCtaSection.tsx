@@ -4,7 +4,7 @@ import { COMPANY_INFO, getWhatsAppUrl, WHATSAPP_MESSAGES } from '../../data/comp
 
 export const FinalCtaSection: React.FC = () => {
   return (
-    <section className="snap-slide relative flex flex-col justify-center py-16 px-4 sm:px-6 max-w-5xl mx-auto w-full min-h-[100dvh]">
+    <section className="fluid-section flex flex-col justify-center py-20 sm:py-28 px-4 sm:px-6 max-w-5xl mx-auto w-full min-h-[calc(100vh-4rem)]">
       {/* Background ambient light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-gradient-to-tr from-cyan-500/15 via-emerald-500/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 

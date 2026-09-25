@@ -22,7 +22,14 @@ export default function App() {
     if (index < 0 || index >= SLIDES_CONFIG.length) return;
     const targetElement = slideRefs.current[index];
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 70;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
       setCurrentSlideIndex(index);
     }
   }, []);
@@ -39,15 +46,12 @@ export default function App() {
     }
   }, [currentSlideIndex, scrollToSlide]);
 
-  // Track active slide with IntersectionObserver
+  // Track active slide with IntersectionObserver on viewport window
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
             const indexStr = entry.target.getAttribute('data-slide-index');
             if (indexStr !== null) {
               const idx = parseInt(indexStr, 10);
@@ -59,8 +63,9 @@ export default function App() {
         });
       },
       {
-        root: container,
-        threshold: [0.45, 0.7],
+        root: null, // viewport window
+        rootMargin: '-10% 0px -25% 0px',
+        threshold: [0.35],
       }
     );
 
@@ -111,7 +116,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative bg-[#080B10] text-slate-100 min-h-screen overflow-hidden">
+    <div className="relative bg-[#080B10] text-slate-100 min-h-screen">
       {/* Top Navigation Bar */}
       <Header
         currentSlideIndex={currentSlideIndex}
@@ -122,8 +127,7 @@ export default function App() {
       {/* Main Presentation Slides Container */}
       <main
         ref={containerRef}
-        className="snap-presentation select-text"
-        tabIndex={0}
+        className="w-full select-text pt-16 sm:pt-18 outline-none"
         aria-label="Apresentação Comercial WF Mídias"
       >
         {/* Slide 01: HERO */}

@@ -8,7 +8,7 @@ interface FooterSectionProps {
 
 export const FooterSection: React.FC<FooterSectionProps> = ({ onBackToTop }) => {
   return (
-    <footer className="snap-slide relative flex flex-col justify-between py-12 px-4 sm:px-6 max-w-5xl mx-auto w-full min-h-[100dvh]">
+    <footer className="fluid-section flex flex-col justify-between py-16 px-4 sm:px-6 max-w-5xl mx-auto w-full min-h-[50vh]">
       <div className="my-auto max-w-3xl mx-auto text-center w-full">
         {/* Logo */}
         <div className="w-20 h-20 mx-auto rounded-2xl bg-slate-900 border border-cyan-500/30 p-2 shadow-2xl mb-5 flex items-center justify-center">
